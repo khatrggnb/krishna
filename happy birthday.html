@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      color: #fff;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    .message {
+      font-size: 1.5em;
+      margin: 30px auto;
+      max-width: 600px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .confetti {
+      font-size: 50px;
+      animation: float 2s infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    button {
+      margin-top: 40px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #ff6f91;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="confetti">🎉🎉🎉</div>
+  <h1>Happy Birthday, My Fevourite one 💖</h1>
+  <div class="message" id="wishMessage">
+    Wishing you all the happiness in the world today and always. You light up my life like nobody else. I’m so lucky to have you. 💫🎂
+  </div>
+
+  <button onclick="showMoreWishes()">Show More Wishes 💌</button>
+
+  <script>
+    const wishes = [
+      "You're the reason my life feels so magical every day. Happy Birthday! 🎈",
+      "May your smile shine as bright as your soul. You deserve the world. 💝",
+      "On this special day, I just want to say—I love you more every single day. ❤️",
+      "Let’s make this birthday unforgettable. You and me, always. 🥰"
+    ];
+
+    let index = 0;
+    function showMoreWishes() {
+      index = (index + 1) % wishes.length;
+      document.getElementById('wishMessage').innerText = wishes[index];
+    }
+  </script><br>
+</body>
+</html>
